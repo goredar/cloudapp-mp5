@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3513ce06-b0c8-48b9-b5a8-89358f4490d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RandomForestMP.java" afterPath="$PROJECT_DIR$/src/RandomForestMP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KMeansMP.java" afterPath="$PROJECT_DIR$/src/KMeansMP.java" />
     </list>
     <ignored path="cloudapp-mp5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RandomForestMP.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RandomForestMP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RandomForestMP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7193251">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KMeansMP.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/KMeansMP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.69018406">
+              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -49,6 +59,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/ConnectedComponentsComputation.java" />
         <option value="$PROJECT_DIR$/src/RandomForestMP.java" />
+        <option value="$PROJECT_DIR$/src/KMeansMP.java" />
       </list>
     </option>
   </component>
@@ -266,8 +277,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RandomForestMP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7193251">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KMeansMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69018406">
+          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
           <folding />
         </state>
       </provider>
