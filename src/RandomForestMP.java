@@ -45,9 +45,9 @@ public final class RandomForestMP {
         //    public LabeledPoint call(Vector points) {
         //        return new LabeledPoint(model.predict(points), points);
         //    }
-        });
+        //});
 
-        results.saveAsTextFile(results_path);
+        //results.saveAsTextFile(results_path);
 
         sc.stop();
     }
