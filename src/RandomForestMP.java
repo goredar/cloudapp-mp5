@@ -60,8 +60,8 @@ public final class RandomForestMP {
         model = RandomForest.trainClassifier(train, numClasses,
                 categoricalFeaturesInfo, numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins, seed);
 
-        JavaRDD<LabeledPoint> results = test.map(new Function<Vector, LabeledPoint>() {
-            public LabeledPoint call(Vector points) {
+        JavaRDD<LabeledPoint> results = test.map(new Function<LabeledPoint, LabeledPoint>() {
+            public LabeledPoint call(LabeledPoint points) {
                 return new LabeledPoint(model.predict(points), points);
             }
         });
