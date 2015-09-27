@@ -40,7 +40,7 @@ public class ShortestPathsComputation extends BasicComputation<
               vertex.setValue(new IntWritable(0));
               for (Edge<IntWritable, NullWritable> edge : vertex.getEdges()) {
                   IntWritable neighbor = edge.getTargetVertexId();
-                  sendMessage(neighbor, new IntWritable(vertex.getValue() + 1));
+                  sendMessage(neighbor, new IntWritable(vertex.getValue().get() + 1));
               }
           }
           else {
@@ -66,7 +66,7 @@ public class ShortestPathsComputation extends BasicComputation<
           vertex.setValue(new IntWritable(minPath));
           for (Edge<IntWritable, NullWritable> edge : vertex.getEdges()) {
               IntWritable neighbor = edge.getTargetVertexId();
-              sendMessage(neighbor, new IntWritable(vertex.getValue() + 1));
+              sendMessage(neighbor, new IntWritable(vertex.getValue().get() + 1));
           }
       }
       vertex.voteToHalt();
