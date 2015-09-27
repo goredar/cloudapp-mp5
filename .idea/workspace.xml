@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3513ce06-b0c8-48b9-b5a8-89358f4490d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShortestPathsComputation.java" afterPath="$PROJECT_DIR$/src/ShortestPathsComputation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RandomForestMP.java" afterPath="$PROJECT_DIR$/src/RandomForestMP.java" />
     </list>
     <ignored path="cloudapp-mp5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShortestPathsComputation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ShortestPathsComputation.java">
+      <file leaf-file-name="RandomForestMP.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RandomForestMP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83435583">
-              <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
-              <folding />
+            <state vertical-scroll-proportion="0.69018406">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#2504#2505#0" expanded="true" />
+                <element signature="e#2590#2591#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,9 +51,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ConnectedComponentsComputation.java" />
-        <option value="$PROJECT_DIR$/src/RandomForestMP.java" />
         <option value="$PROJECT_DIR$/src/KMeansMP.java" />
         <option value="$PROJECT_DIR$/src/ShortestPathsComputation.java" />
+        <option value="$PROJECT_DIR$/src/RandomForestMP.java" />
       </list>
     </option>
   </component>
@@ -258,14 +261,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/RandomForestMP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7193251">
-          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/KMeansMP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66871166">
@@ -290,6 +285,17 @@
         <state vertical-scroll-proportion="0.83435583">
           <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RandomForestMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69018406">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
