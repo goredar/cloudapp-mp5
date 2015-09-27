@@ -57,7 +57,8 @@ public final class RandomForestMP {
         JavaRDD<LabeledPoint> train = sc.textFile(training_data_path).map(new DataToPoint());
         JavaRDD<LabeledPoint> test = sc.textFile(test_data_path).map(new DataToPoint());
 
-        final NaiveBayesModel model = NaiveBayes.train(train.rdd(), 1.0);
+        final RandomForestModel model = RandomForest.trainClassifier(trainingData, numClasses, categoricalFeaturesInfo,
+                numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins)
 
         JavaRDD<LabeledPoint> results = test.map(new Function<Vector, LabeledPoint>() {
             public LabeledPoint call(Vector points) {
