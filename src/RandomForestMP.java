@@ -53,20 +53,34 @@ public final class RandomForestMP {
         Integer maxBins = 32;
         Integer seed = 12345;
 
-		// TODO
         JavaRDD<LabeledPoint> train = sc.textFile(training_data_path).map(new DataToPoint());
-        JavaRDD<LabeledPoint> test = sc.textFile(test_data_path).map(new DataToPoint());
+        JavaRDD<LabeledPoint> base = sc.textFile(training_data_path).map(new DataToPoint());
 
-        model = RandomForest.trainClassifier(train, numClasses,
-                categoricalFeaturesInfo, numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins, seed);
+        model = RandomForest.trainClassifier(train,
+                numClasses, categoricalFeaturesInfo, numTrees, featureSubsetStrategy, impurity,
+                maxDepth, maxBins, seed);
 
-        JavaRDD<LabeledPoint> results = test.map(new Function<LabeledPoint, LabeledPoint>() {
-            public LabeledPoint call(LabeledPoint points) {
-                return new LabeledPoint(model.predict(points), points);
+        JavaRDD<LabeledPoint> results = base.map(new Function<LabeledPoint, LabeledPoint>() {
+            public LabeledPoint call(LabeledPoint point) {
+                return new LabeledPoint(model.predict(point.features()), point.features());
             }
         });
-
         results.saveAsTextFile(results_path);
+
+        JavaPairRDD<Double, Double> predictionAndLabel =
+                base.mapToPair(new PairFunction<LabeledPoint, Double, Double>() {
+                    public Tuple2<Double, Double> call(LabeledPoint point) {
+                        return new Tuple2<Double, Double>(model.predict(point.features()), point.label());
+                    }
+                });
+
+        double accuracy = predictionAndLabel.filter(new Function<Tuple2<Double, Double>, Boolean>() {
+            public Boolean call(Tuple2<Double, Double> pl) {
+                return pl._1().equals(pl._2());
+            }
+        }).count() / (double) base.count();
+
+        System.out.println(accuracy);
 
         sc.stop();
     }
