@@ -41,10 +41,10 @@ public final class RandomForestMP {
 
 		// TODO
 
-        JavaRDD<LabeledPoint> results = test.map(new Function<Vector, LabeledPoint>() {
-            public LabeledPoint call(Vector points) {
-                return new LabeledPoint(model.predict(points), points);
-            }
+        //JavaRDD<LabeledPoint> results = test.map(new Function<Vector, LabeledPoint>() {
+        //    public LabeledPoint call(Vector points) {
+        //        return new LabeledPoint(model.predict(points), points);
+        //    }
         });
 
         results.saveAsTextFile(results_path);
