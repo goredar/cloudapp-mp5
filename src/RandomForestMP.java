@@ -53,14 +53,14 @@ public final class RandomForestMP {
         Integer maxBins = 32;
         Integer seed = 12345;
 
+        // TODO
         JavaRDD<LabeledPoint> train = sc.textFile(training_data_path).map(new DataToPoint());
-        JavaRDD<LabeledPoint> base = sc.textFile(training_data_path).map(new DataToPoint());
+        JavaRDD<LabeledPoint> test = sc.textFile(training_data_path).map(new DataToPoint());
 
         model = RandomForest.trainClassifier(train,
-                numClasses, categoricalFeaturesInfo, numTrees, featureSubsetStrategy, impurity,
-                maxDepth, maxBins, seed);
+                numClasses, categoricalFeaturesInfo, numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins, seed);
 
-        JavaRDD<LabeledPoint> results = base.map(new Function<LabeledPoint, LabeledPoint>() {
+        JavaRDD<LabeledPoint> results = test.map(new Function<LabeledPoint, LabeledPoint>() {
             public LabeledPoint call(LabeledPoint point) {
                 return new LabeledPoint(model.predict(point.features()), point.features());
             }
@@ -68,7 +68,7 @@ public final class RandomForestMP {
         results.saveAsTextFile(results_path);
 
         JavaPairRDD<Double, Double> predictionAndLabel =
-                base.mapToPair(new PairFunction<LabeledPoint, Double, Double>() {
+                test.mapToPair(new PairFunction<LabeledPoint, Double, Double>() {
                     public Tuple2<Double, Double> call(LabeledPoint point) {
                         return new Tuple2<Double, Double>(model.predict(point.features()), point.label());
                     }
@@ -78,9 +78,10 @@ public final class RandomForestMP {
             public Boolean call(Tuple2<Double, Double> pl) {
                 return pl._1().equals(pl._2());
             }
-        }).count() / (double) base.count();
+        }).count() / (double) test.count();
 
-        System.out.println(accuracy);
+        System.out.printf("Classification Accuracy: %.4f \n", accuracy);
+        //System.out.println();
 
         sc.stop();
     }
