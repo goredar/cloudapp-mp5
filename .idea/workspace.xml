@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3513ce06-b0c8-48b9-b5a8-89358f4490d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KMeansMP.java" afterPath="$PROJECT_DIR$/src/KMeansMP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShortestPathsComputation.java" afterPath="$PROJECT_DIR$/src/ShortestPathsComputation.java" />
     </list>
     <ignored path="cloudapp-mp5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,15 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KMeansMP.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/KMeansMP.java">
+      <file leaf-file-name="ShortestPathsComputation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ShortestPathsComputation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66871166">
-              <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
-              <folding>
-                <element signature="e#1552#1553#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="1.7668712">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,6 +50,7 @@
         <option value="$PROJECT_DIR$/src/ConnectedComponentsComputation.java" />
         <option value="$PROJECT_DIR$/src/RandomForestMP.java" />
         <option value="$PROJECT_DIR$/src/KMeansMP.java" />
+        <option value="$PROJECT_DIR$/src/ShortestPathsComputation.java" />
       </list>
     </option>
   </component>
@@ -268,14 +266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConnectedComponentsComputation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7116565">
-          <caret line="68" column="3" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/KMeansMP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66871166">
@@ -284,6 +274,22 @@
             <element signature="e#1552#1553#0" expanded="true" />
             <element signature="e#1594#1595#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConnectedComponentsComputation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1993865">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShortestPathsComputation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7668712">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
