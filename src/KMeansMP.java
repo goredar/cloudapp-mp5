@@ -77,7 +77,7 @@ public final class KMeansMP {
         JavaRDD<String> titles = lines.map(new ParseTitle());
 
         KMeansModel model = KMeans.train(points.rdd(), k, iterations, runs, KMeans.RANDOM(), 0);
-        results = =titles.zip(points).mapToPair(new ClusterCars(model)).groupByKey();
+        results = titles.zip(points).mapToPair(new ClusterCars(model)).groupByKey();
         results.saveAsTextFile(results_path);
 
         sc.stop();
